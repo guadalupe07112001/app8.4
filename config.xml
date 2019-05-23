@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<widget xmlns = "http://www.w3.org/ns/widgets"
+xmlns:gap = "http://phonegap.com/ns/1.0"
+id ="com.phonegap.app8"
+version = "1.0.0">
+
+<name>Geolocalización en Google Maps</name>
+
+<description>
+Muestra la ubicación del dispositivo de acuerdo al GPS y en el mapa de Google Maps
+</description>
+
+<author href="https://build.phonegap.com" email="lupita0072001@gmail.com">
+María Guadalupe López Eliosa
+</author>
+
+<!--personaliza la aplicacion y plataforma -->
+<preference name="orientation"    value="default"/>
+<preference name="target-device"   value="universal"/>
+<preference name="fullscreen"     value="true"/>
+<preference name="android-installLocation"  value="auto"/>
+<preference name="permissions" value="INTERNET"/>
+
+<!--plugins-->
+<plugin name="cordova-plugin-device" spec="~1.1.4"/>
+<plugin name="cordova-plugin-vibration" spec="~2.1.3"/>
+<plugin name="cordova-plugin-dialogs" spec="~1.3.1"/>
+
+<!--Plugin para geolocalizar-->
+<plugin name="cordova-plugin-geolocation" source="npm"/>
+
+<!--Para accesar a paginas en internet-->
+<allow-intent href="https://*/"/>
+<acces origin="https://*/"/>
+<allow-intent href="http://*/"/>
+<acces origin="http://*/"/>
+<plugin name="cordova-plugin-whitelist" source="npm"/>
+
+<!-- Colocar icono app -->
+<icon src="res/android/mdpi.png"/>
+
+</widget>
+
